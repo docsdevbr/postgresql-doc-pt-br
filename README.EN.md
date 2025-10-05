@@ -51,7 +51,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: https://www.opensource.org/licenses/postgresql
+[license]: LICENSE
 
 [page]: https://pt.docs.dev.br/p/postgresql/docs/
 
