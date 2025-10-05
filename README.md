@@ -37,7 +37,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [badge-github-sponsors]: https://img.shields.io/github/sponsors/docsdevbr
 
-[badge-license]: https://img.shields.io/github/license/docsdevbr/postgresql-doc-pt-br
+[badge-license]: https://img.shields.io/badge/license-PostgreSQL-green
 
 [badge-readme-en]: https://img.shields.io/badge/lang-en-blue
 
