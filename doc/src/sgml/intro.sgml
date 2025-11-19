@@ -1,161 +1,177 @@
-<!-- doc/src/sgml/intro.sgml -->
+<!--
+Portions Copyright (c) 1996-2025 The PostgreSQL Global Development Group.
+Portions Copyright (c) 1994 The Regents of the University of California.
+
+Documentation licensed under the PostgreSQL License.
+The original work was translated from English into Brazilian Portuguese.
+https://github.com/postgres/postgres/blob/-/COPYRIGHT
+
+source_url: https://github.com/postgres/postgres/blob/REL_18_STABLE/doc/src/sgml/intro.sgml
+revision: 4d42b4edc6def25cab63894a2d351d597606492d
+status: ready
+-->
 
 <preface id="preface">
- <title>Preface</title>
-
- <para>
-  This book is the official documentation of
-  <productname>PostgreSQL</productname>.  It has been written by the
-  <productname>PostgreSQL</productname> developers and other
-  volunteers in parallel to the development of the
-  <productname>PostgreSQL</productname> software.  It describes all
-  the functionality that the current version of
-  <productname>PostgreSQL</productname> officially supports.
- </para>
-
- <para>
-  To make the large amount of information about
-  <productname>PostgreSQL</productname> manageable, this book has been
-  organized in several parts.  Each part is targeted at a different
-  class of users, or at users in different stages of their
-  <productname>PostgreSQL</productname> experience:
-
-  <itemizedlist>
-   <listitem>
-    <para>
-     <xref linkend="tutorial"/> is an informal introduction for new users.
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     <xref linkend="sql"/> documents the <acronym>SQL</acronym> query
-     language environment, including data types and functions, as well
-     as user-level performance tuning.  Every
-     <productname>PostgreSQL</productname> user should read this.
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     <xref linkend="admin"/> describes the installation and
-     administration of the server.  Everyone who runs a
-     <productname>PostgreSQL</productname> server, be it for private
-     use or for others, should read this part.
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     <xref linkend="client-interfaces"/> describes the programming
-     interfaces for <productname>PostgreSQL</productname> client
-     programs.
-    </para>
-   </listitem>
-
-
-   <listitem>
-    <para>
-     <xref linkend="server-programming"/> contains information for
-     advanced users about the extensibility capabilities of the
-     server.  Topics include user-defined data types and
-     functions.
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     <xref linkend="reference"/> contains reference information about
-     SQL commands, client and server programs.  This part supports
-     the other parts with structured information sorted by command or
-     program.
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     <xref linkend="internals"/> contains assorted information that might be of
-     use to <productname>PostgreSQL</productname> developers.
-    </para>
-   </listitem>
-  </itemizedlist>
- </para>
-
- <sect1 id="intro-whatis">
-  <title> What Is <productname>PostgreSQL</productname>?</title>
+  <title>Prefácio</title>
 
   <para>
-   <productname>PostgreSQL</productname> is an object-relational
-   database management system (<acronym>ORDBMS</acronym>) based on
-   <ulink url="https://dsf.berkeley.edu/postgres.html">
-   <productname>POSTGRES, Version 4.2</productname></ulink>,
-   developed at the University of California at Berkeley Computer Science
-   Department.  POSTGRES pioneered many concepts that only became
-   available in some commercial database systems much later.
+    Este livro é a documentação oficial do
+    <productname>PostgreSQL</productname>.
+    Foi escrito pelas pessoas desenvolvedoras do
+    <productname>PostgreSQL</productname> e outras voluntárias em paralelo ao
+    desenvolvimento do software <productname>PostgreSQL</productname>.
+    Ele descreve todas as funcionalidades que a versão atual do
+    <productname>PostgreSQL</productname> suporta oficialmente.
   </para>
 
   <para>
-   <productname>PostgreSQL</productname> is an open-source descendant
-   of this original Berkeley code.  It supports a large part of the SQL
-   standard and offers many modern features:
+    Para tornar a grande quantidade de informações sobre o
+    <productname>PostgreSQL</productname> gerenciável, este livro foi organizado
+    em várias partes.
+    Cada parte é direcionada a uma classe diferente de pessoas usuárias, ou a
+    pessoas usuárias em diferentes estágios de sua experiência com o
+    <productname>PostgreSQL</productname>:
 
-   <itemizedlist spacing="compact">
-    <listitem>
-     <simpara><link linkend="sql">complex queries</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="ddl-constraints-fk">foreign keys</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="triggers">triggers</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="sql-createview-updatable-views">updatable views</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="transaction-iso">transactional integrity</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="mvcc">multiversion concurrency control</link></simpara>
-    </listitem>
-   </itemizedlist>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <xref linkend="tutorial"/> é uma introdução informal para novas
+          pessoas usuárias.
+        </para>
+      </listitem>
 
-   Also, <productname>PostgreSQL</productname> can be extended by the
-   user in many ways, for example by adding new
+      <listitem>
+        <para>
+          <xref linkend="sql"/> documenta o ambiente da linguagem de consulta
+          <acronym>SQL</acronym>, incluindo tipos de dados e funções, bem como
+          o ajuste de desempenho em nível de pessoa usuária.
+          Toda pessoa usuária do <productname>PostgreSQL</productname> deve ler
+          isto.
+        </para>
+      </listitem>
 
-   <itemizedlist spacing="compact">
-    <listitem>
-     <simpara><link linkend="datatype">data types</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="functions">functions</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="functions">operators</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="functions-aggregate">aggregate functions</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="indexes">index methods</link></simpara>
-    </listitem>
-    <listitem>
-     <simpara><link linkend="server-programming">procedural languages</link></simpara>
-    </listitem>
-   </itemizedlist>
+      <listitem>
+        <para>
+          <xref linkend="admin"/> descreve a instalação e administração do
+          servidor.
+          Todas as pessoas que executam um servidor
+          <productname>PostgreSQL</productname>, seja para uso privado ou para
+          terceiros, devem ler esta parte.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>
+          <xref linkend="client-interfaces"/> descreve as interfaces de
+          programação para programas clientes do
+          <productname>PostgreSQL</productname>.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>
+          <xref linkend="server-programming"/> contém informações para pessoas
+          usuárias avançadas sobre os recursos de extensibilidade do servidor.
+          Os tópicos incluem tipos de dados definidos pela pessoa usuária e
+          funções.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>
+          <xref linkend="reference"/> contém informações de referência sobre
+          comandos SQL, programas cliente e servidor.
+          Esta parte auxilia as outras partes com informações estruturadas,
+          classificadas por comando ou programa.
+        </para>
+      </listitem>
+
+      <listitem>
+        <para>
+          <xref linkend="internals"/> contém informações diversas que podem ser
+          úteis para pessoas desenvolvedoras do
+          <productname>PostgreSQL</productname>.
+        </para>
+      </listitem>
+    </itemizedlist>
   </para>
 
-  <para>
-   And because of the liberal license,
-   <productname>PostgreSQL</productname> can be used, modified, and
-   distributed by anyone free of charge for any purpose, be it
-   private, commercial, or academic.
-  </para>
- </sect1>
+  <sect1 id="intro-whatis">
+    <title>O que é o <productname>PostgreSQL</productname>?</title>
 
- &history;
- &notation;
- &info;
- &problems;
+    <para>
+      <productname>PostgreSQL</productname> é um sistema de gerenciamento de
+      banco de dados objeto-relacional (<acronym>ORDBMS</acronym>) baseado no
+      <ulink url="https://dsf.berkeley.edu/postgres.html">
+        <productname>POSTGRES, versão 4.2</productname>
+      </ulink>,
+      desenvolvido no Departamento de Ciência da Computação da Universidade da
+      Califórnia em Berkeley.
+      O POSTGRES foi pioneiro em muitos conceitos que só se tornaram disponíveis
+      em alguns sistemas de banco de dados comerciais muito mais tarde.
+    </para>
+
+    <para>
+      O <productname>PostgreSQL</productname> é um descendente de código aberto
+      do código original de Berkeley.
+      Ele suporta grande parte do padrão SQL e oferece muitos recursos modernos:
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <simpara><link linkend="sql">consultas complexas;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="ddl-constraints-fk">chaves estrangeiras;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="triggers">gatilhos;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="sql-createview-updatable-views">visualizações atualizáveis;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="transaction-iso">integridade transacional;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="mvcc">controle de concorrência multiversão.</link></simpara>
+        </listitem>
+      </itemizedlist>
+
+      Além disso, o <productname>PostgreSQL</productname> pode ser estendido pela
+      pessoa usuária de diversas maneiras, por exemplo, adicionando novos
+
+      <itemizedlist spacing="compact">
+        <listitem>
+          <simpara><link linkend="datatype">tipos de dados;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="functions">funções;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="functions">operadores;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="functions-aggregate">funções de agregação;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="indexes">métodos de indexação;</link></simpara>
+        </listitem>
+        <listitem>
+          <simpara><link linkend="server-programming">linguagens procedurais.</link></simpara>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <para>
+      E devido à licença liberal, o <productname>PostgreSQL</productname> pode
+      ser usado, modificado e distribuído gratuitamente por qualquer pessoa para
+      qualquer finalidade, seja ela privada, comercial ou acadêmica.
+    </para>
+  </sect1>
+
+  &history;
+  &notation;
+  &info;
+  &problems;
 
 </preface>
