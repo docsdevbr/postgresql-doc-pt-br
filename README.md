@@ -27,7 +27,7 @@ Você pode apoiar o projeto através do [GitHub Sponsors][github-sponsors] ou
 
 ## Licença
 
-Portions copyright (c) 1996-2025 The PostgreSQL Global Development Group.<br>
+Copyright (c) 1996-2025 The PostgreSQL Global Development Group.<br>
 Portions copyright (c) 1994 The Regents of the University of California.
 
 Documentação licenciada sob a [Licença PostgreSQL][license].<br>

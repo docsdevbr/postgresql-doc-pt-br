@@ -27,10 +27,10 @@ You can support the project through [GitHub Sponsors][github-sponsors] or
 
 ## License
 
-Portions copyright (c) 1996-2025 The PostgreSQL Global Development Group.<br>
+Copyright (c) 1996-2025 The PostgreSQL Global Development Group.<br>
 Portions copyright (c) 1994 The Regents of the University of California.
 
-Documentation licensed under the [The PostgreSQL License][license].<br>
+Documentation licensed under the [PostgreSQL License][license].<br>
 The original work was translated from English into Brazilian Portuguese.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/postgresql-doc-pt-br
